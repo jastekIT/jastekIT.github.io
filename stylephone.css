@@ -203,6 +203,21 @@ nav li.active a{
     animation: active 5s;
 }
 
+.msg-col h2{
+    color: #fff;
+    font-size: 55px;
+    font-weight: 100;
+    margin: 10px 0;
+    animation: active 5s;
+}
+
+.msg-colabout h2{
+    color: #fff;
+    font-size: 55px;
+    font-weight: 100;
+    margin: 10px 0;
+    animation: active 5s;
+}
 .msg-col p{
     color: #ddd;
     font-size: 30px;
