@@ -1,0 +1,558 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body
+{
+    min-height: 100vh;
+    background: #111;
+    overflow: hidden;
+}
+span
+{
+    position: absolute;
+    pointer-events: none;
+    animation: animate 1s linear infinite;
+}
+@keyframes animate
+{
+    0%
+    {
+        translate: 0 0;
+        opacity: 0;
+    }
+    10%
+    {
+        opacity: 1;
+    }
+    30%
+    {
+        translate: 0 100px;
+        opacity: 1;
+    }
+    90%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        translate: 0 80px;
+        opacity: 0;
+    }
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(images/JastekWebsiteWallpaperBackground.png);
+    background-position: absolute;
+    background-size: cover;
+    position: relative;
+    padding-top: 30px;
+    box-sizing: border-box;
+    
+}
+
+.containercontact{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)), url(images/JastekWebsiteWallpaperBackground.png);
+    background-position: absolute;
+    background-size: cover;
+    position: relative;
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+
+.Konami{
+    width: 100%;
+    height: 100vh;
+    background-position: absolute;
+    background-size: cover;
+    position: relative;
+    padding-top: 30px;
+    box-sizing: border-box;
+    display: none;
+}
+
+
+.navbar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.500);
+    padding: 0 60px;
+    box-sizing: border-box;
+    position: relative;
+     /* 255, 0, 0, 0.507 */ 
+}
+
+.logo{
+    width: 170px;
+}
+
+.logo img{
+    width: 75px;
+    position: relative;
+    z-index: 10;
+    margin-left: -25px;
+    cursor: pointer;
+}
+
+nav{
+    flex: 1;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 50px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    transition: 0.5s ease-in-out;
+}
+nav ul li a:hover{
+    background-color: #ff0000;
+    color:#fff;
+    padding: 10px 35px;
+    border-radius: 30px;
+    transition: 0.5s ease;
+}
+
+nav li.active a{
+    background-color: #ff0000;
+    color:#fff;
+    padding: 10px 35px;
+    border-radius: 30px;
+}
+
+.user{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 14px;
+    position: relative;
+}
+
+.user img{
+    width: 40px;
+    margin-left: 15px;
+    cursor: pointer;
+    position: relative;
+}
+
+.sidebar{
+    width: 155px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.500);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.mail-icon{
+    width: 30px;
+    display: block;
+    margin: 120px auto 0;
+    transition: 0.5s ease-in-out;
+}
+
+.social-links{
+    width: 20px;
+    display: block;
+    margin: 170px auto 0;
+    transform: translateX(-50%);
+    position: relative;
+    text-align: center;
+}
+
+.social-links img{
+    height: 15px;
+    margin-bottom: 30px;
+    transition: 0.5s ease-in-out;
+}
+
+
+
+.info-icon{
+    width: 20px;
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+}
+
+.msg-container{
+    width: 600px;
+    height: 300px;
+    max-height: 100%;
+    position: absolute;
+    left: 530px;
+    top: 30%;
+    transform: translateX(-50%);
+    overflow: hidden;
+}
+
+#slider{
+    display: inline-flex;
+    transition: 0.5s;
+}
+
+.msg-col{
+    width: 600px;
+    height: 280px;
+}
+
+.msg-col h1{
+    color: #fff;
+    font-size: 80px;
+    font-weight: 100;
+    margin: 10px 0;
+    animation: active 5s;
+}
+
+.msg-col h2{
+    color: #fff;
+    font-size: 60px;
+    font-weight: 100;
+    margin: 10px 0;
+    animation: active 5s;
+}
+
+.msg-col p{
+    color: #ddd;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.msg-col a{
+    display: inline-block;
+    text-decoration: none;
+    color: #555;
+    background: #fff;
+    font-size: 15px;
+    padding: 10px 35px;
+    border-radius: 30px;
+    margin-top: 25px;
+    transition: 0.5s ease-in-out;
+}
+
+.msg-col a:hover{
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background: #ff0000;
+    font-size: 15px;
+    padding: 10px 35px;
+    border-radius: 30px;
+    margin-top: 25px;
+    transition: 0.5s ease;
+}
+
+
+.controller{
+    width: 1px;
+    height: 320px;
+    display: block;
+    background: #c0c0c0;
+    transform: translateX(-50%);
+    position: fixed;
+    top: 30%;
+    right: 50px;
+    
+}
+
+#line1,#line2,#line3,#line4{
+    height: 80px;
+    width: 10px;
+    cursor: pointer;
+    transform: translateX(-50%);
+}
+
+#active{
+    width: 5px;
+    height: 80px;
+    border-radius: 10px;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+
+.msg-containerabout{
+    width: 600px;
+    height: 500px;
+    position: absolute;
+    left: 500px;
+    top: 20%;
+    transform: translateX(-50%);
+    overflow: hidden;
+}
+
+.msg-colabout{
+    width: 600px;
+    height: 200px;
+}
+
+.msg-colabout h1{
+    color: #fff;
+    font-size: 100px;
+    font-weight: 100px;
+    margin: 30px 0;
+    animation: active 5s;
+}
+.msg-colabout h2{
+    color: #fff;
+    font-size: 60px;
+    font-weight: 100;
+    margin: 10px 0;
+    animation: active 5s;
+}
+.msg-colabout p{
+    color: #ddd;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.msg-colabout a{
+    display: inline-block;
+    text-decoration: none;
+    color: #555;
+    background: #fff;
+    font-size: 15px;
+    padding: 10px 35px;
+    border-radius: 30px;
+    margin-top: 25px;
+    transition: 0.5s ease-in-out;
+}
+
+.msg-colabout a:hover{
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background: #ff0000;
+    font-size: 15px;
+    padding: 10px 35px;
+    border-radius: 30px;
+    margin-top: 25px;
+    transition: 0.5s ease;
+}
+
+.controllerabout{
+    width: 1px;
+    height: 320px;
+    display: block;
+    background: #c0c0c0;
+    position: absolute;
+    top: 55%;
+    right: 50px;
+    transform: translateY(-50%);
+}
+
+#sliderabout{
+    display: inline-flex;
+    transition: 0.5s;
+}
+
+#line1about,#line2about,#line3about,#line4about{
+    height: 100px;
+    width: 10px;
+    cursor: pointer;
+    transform: translateX(-50%);
+}
+
+#activeabout{
+    width: 5px;
+    height: 80px;
+    border-radius: 10px;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+
+.register-box{
+    width: 280px;
+    position: fixed;
+    top: 55%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    color:  #fff;
+}
+
+.register-box h1{
+    float: left;
+    font-size: 40px;
+    border-bottom: 6px solid #ff0000;
+    margin-bottom: 50px;
+    padding: 13px 0;
+}
+
+.Registerbtn{
+    width: 100%;
+    background: none;
+    border: 2px solid #ff0000;
+    color: white;
+    padding: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 12px 0;
+    transition: 0.5s ease-in-out;
+}
+
+.Contactbtn{
+    width: 100%;
+    background: none;
+    border: 2px solid #ff0000;
+    color: white;
+    padding: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 12px 0;
+    transition: 0.5s ease-in-out;
+}
+.Contactbtn:hover{
+    width: 100%;
+    background: #ff0000;
+    border: 2px solid #ff0000;
+    color: white;
+    padding: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 12px 0;
+    transition: 0.5s ease;
+}
+.textbox{
+    width: 100%;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 8px 0;
+    margin: 8px 0;
+    border-bottom: 1px solid #ff0000;
+    transition: 0.5s ease-in-out;
+}
+
+.textbox i{
+    width: 26px;
+    float: left;
+    text-align: center;
+}
+
+.textbox input{
+    border: none;
+    outline: none;
+    background: none;
+    color: white;
+    font-size: 18px;
+    width: 80%;
+    float: left;
+    margin: 0 10px;
+}
+
+.Registerbtn:hover{
+    width: 100%;
+    background: #ff0000;
+    border: 2px solid #ff0000;
+    color: white;
+    padding: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 12px 0;
+    transition: 0.5s ease;
+}
+
+.textbox:hover{
+    width: 100%;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 8px 0;
+    margin: 8px 0;
+    border-bottom: 7px solid #ff0000;
+    transition: 0.5s ease;
+}
+
+.register-boxMe{
+    width: 280px;
+    position: fixed;
+    top: 55%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    color:  #fff;
+}
+
+.register-boxMe h1{
+    float: left;
+    font-size: 40px;
+    border-bottom: 6px solid #ff0000;
+    margin-bottom: 50px;
+    padding: 13px 0;
+}
+
+.register-boxMe a1{
+    float: left;
+    font-size: 20px;
+    border-bottom: 1px solid #ff0000;
+    margin-bottom: 10px;
+    padding: 13px 0;
+    transition: 0.5s ease-in-out;
+}
+
+.register-boxMe a1:hover{
+    float: left;
+    font-size: 20px;
+    border-bottom: 7px solid #ff0000;
+    margin-bottom: 20px;
+    padding: 13px 0; 
+    transition: 0.5s ease;
+}
+
+.social-links img:hover{
+    width: 30px;
+    display: block;
+    text-align: center;
+    transition: 0.5s ease;
+}
+
+.mail-icon:hover{
+    width: 60px;
+    display: block;
+    margin: 100px auto 0;
+    transition: 0.5s ease;
+}
+
+.register-boxMeSuccess{
+    width: 650px;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:  #fff;
+}
+
+.register-boxMeSuccess h1{
+    float: left;
+    font-size: 40px;
+    border-bottom: 6px solid #ff0000;
+    margin-bottom: 50px;
+    padding: 13px 0;
+}
+
+.register-boxMeSuccess a{
+    width: 600px;
+    float: left;
+    font-size: 35px;
+    Position: fixed;
+    top: 70%;
+    left: 3%;
+    border-bottom: 6px solid #ff0000;
+    margin-bottom: 50px;
+    padding: 13px 0;
+}

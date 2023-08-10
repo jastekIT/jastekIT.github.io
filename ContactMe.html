@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jastek IT Solutions</title>
+    <link rel="Icon" type="text/css" href="images/logo.png">
+        <script src="js/jquery.js"></script>
+        <script type ="text/javascript" src="konami.js"></script>
+        <script type="text/javascript">
+            var reswidth = screen.width;
+    
+            if (reswidth < 1000){
+                document.write('<link rel="stylesheet"  type ="text/css" href="stylephone.css" />');
+            }
+            else {
+                document.write('<link rel="stylesheet"  type ="text/css" href="style.css">');
+            }
+        </script>
+        <script>
+
+            let images = ['😁','😊','😀','😋','😘','😝','😜','🙃','🤑','👽','💀','🤥','🤖','💩','🐒','🐴','🐍','💪','🫶','⚽','🥇','🍔','🍟','❤️','💙','🖤','💫','☢️'];
+        
+        
+            document.addEventListener('mousemove', function(e){
+        
+                let body = document.querySelector('body');
+                let emoji = document.createElement('span');
+                let x = e.offsetX;
+                let y = e.offsetY;
+        
+                emoji.style.left = x+'px';
+                emoji.style.top = y+'px';
+        
+                let icon = images[Math.floor(Math.random() * images.length)];
+                emoji.innerText = icon;
+        
+                let size = Math.random() * 50;
+                emoji.style.fontSize = 5 +size+'px';
+        
+                // get random valuje for transform
+                let max = 0;
+                let min = 200;
+                let randomValue = Math.floor((Math.random() * ((max + 1) - min)) + min);
+        
+                emoji.style.transform = 'translateX('+randomValue +'px';
+        
+                body.appendChild(emoji);
+        
+                setTimeout(function(){
+                    emoji.remove();
+                },1000)
+                })
+            </script>
+    </head>
+    <div class="Konami" onclick="document.location.reload(true)">
+
+    </div>
+<body>
+    
+    <div class="containercontact" id = "Maincontainercontact">
+
+        <div class="navbar">
+            <div class="logo">
+                <a href="Homepage.html">
+                <img src="images/logo.png">
+            </a>
+        </div>  
+            <nav>
+                <ul>
+                    <li><a href="Homepage.html">Home</a></li>
+                    <li><a href="AboutMe.html">About Me</a></li>
+                    <li><a href="Jastek Business Card.pdf" download>Download My Business Card</a></li>
+                    <li class="active"><a href="ContactMe.html">Contact Me</a></li>
+                </ul>
+            </nav>
+            <div class="user">
+                <p>Director: Judd Steiner</p>
+                <a href="Jastek Business Card.pdf" download>
+                    <img src="images/MemojiCurlyLarger.png">
+                </a>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <a href="mailto:juddsteiner@gmail.com">
+                <img src="images/email.png" class="mail-icon">
+                </a>
+            <div class="social-links">
+                <a href="https://www.facebook.com/judd.steiner.3/" target="_blank">
+                <img src="images/fb.png">
+                </a>
+                <a href="https://www.instagram.com/juddi_boi4/" target="_blank">
+                <img src="images/ig.png">
+                </a>    
+                <a href="https://twitter.com/Judd_Steiner4" target="_blank">
+                <img src="images/tw.png">
+                </a>
+                </div>
+                <a href="https://qrco.de/JASTEK" target="_blank">
+                <img src="images/info.png" class="info-icon">
+                </a>
+            </div>
+        </div>
+        <div class="register-boxMe">
+            <h1>My Details</h1>
+            <a1>Name: Judd</a1>
+            <a1>Middle Name: Adam</a1>
+            <a1>Surname: Steiner</a1>
+            <a1>Email Address: steinerjudd@gmail.com</a1>
+            <a1>Phone Number: 071 612 9231</a1>
+            <a1>Home Number: 011 452 5879</a1>
+            <a href="https://qrco.de/JASTEK" target="_blank"><input class="Contactbtn" type="button" name="" value="Get Contact Details"></a>
+        </div>
+        
+         <a  class="Contactbtn" href="AboutMe.html">Save Contact Details</a>
+        <div class="register-box">
+            <form name = "Jastek Contact Me" method="POST" action="/contactsuccessful" data-netlify="true">
+            
+            <h1>Contact Me</h1>
+            <div class="textbox">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <input type="text" placeholder="Name" name="name" value="" required>
+            </div>
+            <div class="textbox">
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <input type="text" placeholder="Surname" name="surname" value="" required>
+            </div>
+             <div class="textbox">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <input type="text" placeholder="Email Address" name="Email" value="" required>
+            </div>
+            <div class="textbox">
+            <i class="fa fa-lock" aria-hidden="true"></i>
+            <input type="text" placeholder="Company Name" name="CompanyName" value="" required>
+            </div>
+            <div class="textbox">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <input type="text" placeholder="Company Phone Number" name="CompanyNumber" value="" required>
+            </div>
+            <div class="textbox">
+                <i class="fa fa-lock" aria-hidden="true"></i>
+                <input type="text" placeholder="Personal Phone Number" name="PersonalNumber" value="" required>
+                </div>
+            <div class="textbox">
+            <i class="fa fa-lock" aria-hidden="true"></i>
+            <input type="text" placeholder="Your Position In Business" name="BusinessPosition" value="" required>
+            </div>
+            <a href=""><input class="Registerbtn" type="submit" name="" value="Contact Me" >
+            </div>
+        </form>
+            
+        
+
+</body>
+</html>
