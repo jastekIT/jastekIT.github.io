@@ -113,8 +113,9 @@
         
          <a  class="Contactbtn" href="AboutMe.html">Save Contact Details</a>
         <div class="register-box">
-            <form name = "Jastek Contact Me" method="POST" action="/contactsuccessful" data-netlify="true">
-            
+             <!-- <form name = "Jastek Contact Me" method="POST" action="/contactsuccessful" data-netlify="true"> -->
+        <form id="contactform" action="https://formsubmit.io/send/04cd805b-6a27-41d1-95df-908855917cb4" method="POST">
+            <input name="_redirect" type="hidden" id="name" value="https://jastekit.github.io/ContactSuccessful.html">
             <h1>Contact Me</h1>
             <div class="textbox">
                 <i class="fa fa-user" aria-hidden="true"></i>
@@ -130,19 +131,23 @@
             </div>
             <div class="textbox">
             <i class="fa fa-lock" aria-hidden="true"></i>
-            <input type="text" placeholder="Company Name" name="CompanyName" value="" required>
+            <input type="text" placeholder="Phone Number" name="PhoneNumber" value="" required>
             </div>
             <div class="textbox">
                 <i class="fa fa-user" aria-hidden="true"></i>
-                <input type="text" placeholder="Company Phone Number" name="CompanyNumber" value="" required>
+                <input type="text" placeholder="Home Address " name="Home Address" value="" required>
             </div>
             <div class="textbox">
                 <i class="fa fa-lock" aria-hidden="true"></i>
-                <input type="text" placeholder="Personal Phone Number" name="PersonalNumber" value="" required>
+                <input type="text" placeholder="Suburb" name="Suburb" value="" required>
                 </div>
+                <div class="textbox">
+                    <i class="fa fa-lock" aria-hidden="true"></i>
+                    <input type="text" placeholder="Postal Code" name="PostalCode" value="" required>
+                    </div>
             <div class="textbox">
             <i class="fa fa-lock" aria-hidden="true"></i>
-            <input type="text" placeholder="Your Position In Business" name="BusinessPosition" value="" required>
+            <input type="text" placeholder="Reason for Call back" name="Reason" value="" required>
             </div>
             <a href=""><input class="Registerbtn" type="submit" name="" value="Contact Me" >
             </div>
