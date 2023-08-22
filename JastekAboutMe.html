@@ -5,7 +5,6 @@
     <link rel="Icon" type="text/css" href="images/logo.png">
     <script src="js/jquery.js"></script>
     <script type ="text/javascript" src="konami.js"></script>
-    <script type ="text/javascript" src="emoji.js"></script>
     <script type="text/javascript">
         var reswidth = screen.width;
 
@@ -25,16 +24,16 @@
 
         <div class="navbar">
             <div class="logo">
-                <a href="Homepage.html">
+                <a href="JastekHomepage.html">
                 <img src="images/logo.png">
             </a>
         </div>  
             <nav>
                 <ul>
-                    <li><a href="Homepage.html">Home</a></li>
-                    <li class="active"><a href="AboutMe.html">About Me</a></li>
+                    <li><a href="JastekHomepage.html">Home</a></li>
+                    <li class="active"><a href="JastekAboutMe.html">About Me</a></li>
                     <li><a href="Jastek Business Card.pdf" download>Download My Business Card</a></li>
-                    <li><a href="ContactMe.html">Contact Me</a></li>
+                    <li><a href="JastekContactMe.html">Contact Me</a></li>
                 </ul>
             </nav>
             <div class="user">
@@ -44,7 +43,7 @@
             </a>
             </div>
             <div class="center">
-                <input type="checkbox" name="" id="jsCheckbox">
+                <input type="checkbox" name="" id="jsCheckbox" Checked>
             </div>
         </div>
 
@@ -145,9 +144,9 @@
         var redirectCheckbox = document.getElementById("jsCheckbox");
         
         redirectCheckbox.addEventListener("change", function () {
-            if (redirectCheckbox.checked) {
+            if (!redirectCheckbox.checked) {
                 setTimeout(function () {
-                    window.location.href = "JastekAboutMe.html";
+                    window.location.href = "AboutMe.html";
                 }, 1500); // 3000 milliseconds = 3 seconds
             }
         });
