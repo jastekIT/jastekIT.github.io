@@ -43,7 +43,7 @@
             </a>
             </div>
             <div class="center">
-                <input type="checkbox" name="" id="jsCheckbox" checked>
+                <input type="checkbox" name="" id="jsCheckbox">
             </div>
         </div>
 
@@ -180,7 +180,7 @@
         var redirectCheckbox = document.getElementById("jsCheckbox");
         
         redirectCheckbox.addEventListener("change", function () {
-            if (!redirectCheckbox.checked) {
+            if (redirectCheckbox.checked) {
                 setTimeout(function () {
                     window.location.href = "Homepage.html";
                 }, 1500); // 3000 milliseconds = 3 seconds
