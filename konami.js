@@ -50,7 +50,7 @@ function activateCheats() {
 
 
 
-  var audio = new Audio('konami/Take.mp3');
+  var audio = new Audio('https://jastekit.github.io/konami/Take.mp3');
   audio.play();
 
   alert("Cheat Code Activated Successfully!");
